@@ -1,14 +1,15 @@
 import java.util.Scanner;
 public class BMI2{
     public static void main(String[] args){
-        do{
         int c;
+        do{
         Scanner in = new Scanner(System.in);
         System.out.println("Podaj swoją wagę(bez oszukiwania): ");
         double waga = in.nextDouble();
         System.out.println("Podaj swój wzrost: ");
         double wzrost = in.nextDouble();
         double BMI = waga/(wzrost*wzrost);
+        System.out.println("Twoje BMI to: "+BMI);
         if(BMI<18.5) System.out.println("Niedowaga");
         else if(BMI>=18.5 && BMI <= 24.99) System.out.println("Waga prawidłowa");
         else System.out.println("Nadwaga");

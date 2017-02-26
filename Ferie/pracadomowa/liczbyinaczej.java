@@ -8,16 +8,17 @@ public class liczbyinaczej{
         File file=new File("liczbyinaczej.txt");
         PrintWriter zapis= new PrintWriter("wynik.txt");
         Scanner in = new Scanner(file);
-        String text = in.nextLine();
-        int text2 = Integer.parseInt(text);
+        String text;
+        int text2;
         int ile = 0;
           while(in.hasNextLine())
         {
             text=in.nextLine();
-            text2=Integer.parseInt(text);
-            System.out.println(text2);
+            System.out.println(text);
         }
+        zapis.close();
         }
+        
         
    
     }

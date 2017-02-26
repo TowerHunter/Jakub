@@ -15,7 +15,7 @@ public class liczbyinaczej{
         int max = text2;
         int ile = 0;
         int ile2 = 0;
-        int suma = text2;
+        int suma = 0;
         while(in.hasNextLine())
         {
             text = in.nextLine();

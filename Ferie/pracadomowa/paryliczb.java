@@ -38,16 +38,17 @@ public class paryliczb{
         for(int i=0;i<1000;i++){
             liczba = in.nextInt();
             liczba2 =in.nextInt();
-            if(liczba2/liczba!=0) ile++;
+            if(liczba2%liczba==0) ile++;
+            if(liczba%liczba2==0) ile++;
             nwd = funkcje.nwd(liczba, liczba2);
             if(nwd==1) ile2++;
             suma1 = funkcje.suma(liczba);
             suma2 = funkcje.suma(liczba2);
             if(suma1 == suma2) ile3++;
         }
-        zapis.println(ile);
-        zapis.println(ile2);
-        zapis.println(ile3);
+        zapis.println("a)"+ile);
+        zapis.println("b)"+ile2);
+        zapis.println("c)"+ile3);
         zapis.close();
    
     }

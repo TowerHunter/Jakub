@@ -28,26 +28,34 @@ public class liczbybinarne{
         Scanner in = new Scanner(file);
         liczbybinarne funkcje = new liczbybinarne();
         String text = in.nextLine();
-        double text2 = Double.longBitsToDouble(new BigInteger(text, 2).longValue());
-        double najw = text2;
-        double najm = text2;
+        BigInteger text2 = new BigInteger(text, 2);
+        BigInteger najw = text2;
+        BigInteger najm = text2;
         int ile = 0;
         int ile2 = 0;
         int ile3 = 0;
-        for(int i=0;i<1000;i++){
+        int numer1=0;
+        int numer2=0;
+        for(int i=0;i<999;i++){
         text = in.nextLine();
-        text2 = Long.parseLong(text, 2);
+        text2 = new BigInteger(text, 2);
         ile = ile + funkcje.zera(text);
         ile2=ile2+funkcje.podzielne2(text);
         ile3=ile3+funkcje.podzielne8(text);
-        if(text2>najw) najw = text2;
-        if(text2<najm) najm = text2;
+        if(najw.compareTo(text2)<0){
+            najw = text2;
+            numer1=i+2;}
+        else if(najm.compareTo(text2)>0){
+            najm = text2;
+            numer2=i+2;
+        }
         }
         zapis.println(ile);
         zapis.println(ile2);
         zapis.println(ile3);
         zapis.println(najw);
-        zapis.println(najm);
+        zapis.println(numer1);
+        zapis.println(numer2);
         zapis.close();
     }
 }

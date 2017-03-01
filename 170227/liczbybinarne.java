@@ -50,12 +50,11 @@ public class liczbybinarne{
             numer2=i+2;
         }
         }
-        zapis.println(ile);
-        zapis.println(ile2);
-        zapis.println(ile3);
-        zapis.println(najw);
-        zapis.println(numer1);
-        zapis.println(numer2);
+        zapis.println("a)"+ile);
+        zapis.println("b)"+ile2);
+        zapis.println("  "+ile3);
+        zapis.println("c)"+numer1);
+        zapis.println("  "+numer2);
         zapis.close();
     }
 }

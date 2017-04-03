@@ -39,21 +39,22 @@ public class powtorzenie{
         powtorzenie funkcje = new powtorzenie();
         int ile=0;
         int suma = 0;
-        int ile2=0;
-        zapis.println("c)");
+        int temp=0;
         while(in.hasNextLine()){
             String text = in.nextLine();
             int liczba = Integer.parseInt(text);
             if(text.length()%2==0) ile++;
-            if(suma<funkcje.sumacyfr(liczba)) suma = funkcje.sumacyfr(liczba);
+            if(suma<funkcje.sumacyfr(liczba)){
+            suma = funkcje.sumacyfr(liczba);
+            temp = liczba;
+            }
             if(liczba<10000) zapis.println(liczba +"----"+ funkcje.x(liczba));
-            ile2+=funkcje.ciag(text);
+            if(funkcje.ciag(text)==1) zapis.println("d)"+liczba);
             
             
         }
         zapis.println("a)"+ile);
-        zapis.println("b)"+suma);
-        zapis.println("d)"+ile2);
+        zapis.println("b)"+temp);
         zapis.close();
    
     }
